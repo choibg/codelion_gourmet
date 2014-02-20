@@ -1,2 +1,11 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<h4><a href="/">Gourmet</a> | <a href="/korean">한식</a> | <a href="/chinese">중식</a> | <a href="/japanese">일식</a> | <a href="/western">양식</a></h4>
+
+<h2><%= @posts[0].category %></h2>
+
+<% @posts.each do |post| %>
+<div style="border: 1px solid #ffffff">
+	<h4><%= post.title %></h4>
+	<p><%= post.content %></p>
+	<p>Like: <span style="color: #0000ff"><%= post.like %></span></p>
+</div>
+<% end %>

@@ -3,6 +3,7 @@ class FoodsController < ApplicationController
   end
 
   def index
+		@posts = Post.where(category: params[:category])
   end
 
   def new
