@@ -1,4 +1,12 @@
 Gourmet::Application.routes.draw do
+  get "foods/home"
+  get "foods/index"
+  get "foods/new"
+  get "foods/create"
+  get "foods/show"
+  get "foods/edit"
+  get "foods/update"
+  get "foods/destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
