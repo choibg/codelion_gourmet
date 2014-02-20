@@ -1,6 +1,6 @@
 Gourmet::Application.routes.draw do
-  get "foods/home"
-  get "foods/index"
+	root 'foods#home'
+  get ":category" => 'foods#index'
   get "foods/new"
   get "foods/create"
   get "foods/show"
