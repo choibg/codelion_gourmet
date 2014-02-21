@@ -1,10 +1,11 @@
 class FoodsController < ApplicationController
-  def home
+  def index
+		@posts = Post.all
   end
 
-  def index
+	def index_category
 		@posts = Post.where(category: params[:category])
-  end
+	end
 
   def new
   end

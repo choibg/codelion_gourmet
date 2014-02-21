@@ -1,2 +1,13 @@
-<h1>Foods#new</h1>
-<p>Find me in app/views/foods/new.html.erb</p>
+<h2>맛집 추가하기</h2>
+<form action="/users/create" method="post">
+	Category: 
+	<select name="post_category">
+		<option value="korean">한식</option>
+		<option value="chinese">중식</option>
+		<option value="japanese">일식</option>
+		<option value="western">양식</option>
+	</select><br>
+  Title: <input type="text" name="post_title" placeholder="제목을 입력하세요."><br>
+  Content: <textarea name="post_content" placeholder="내용을 입력하세요."></textarea><br>
+  <input type="submit" value="추가하기">
+</form>
