@@ -1,2 +1,8 @@
-<h1>Foods#show</h1>
-<p>Find me in app/views/foods/show.html.erb</p>
+<p><%= flash[:alert] %></p>
+
+<p>분류: <%= @post.category %></p>
+<h4>제목: <%= @post.title %></h4>
+<p>내용: <%= @post.content %></p>
+
+<div>
+	<a href="/foods/edit/<%= @post.id %>">편집</a> | <a href="/foods/destroy/<%= @post.id %>">삭제</a> || <a href="/<%= @post.category %>">저장</a>

@@ -1,13 +1,14 @@
 <h2>맛집 추가하기</h2>
+<p><%= flash[:alert] %></p>
 <form action="/foods/create" method="post">
-	Category: 
+	분류: 
 	<select name="post_category">
 		<option value="korean">한식</option>
 		<option value="chinese">중식</option>
 		<option value="japanese">일식</option>
 		<option value="western">양식</option>
 	</select><br>
-  Title: <input type="text" name="post_title" placeholder="제목을 입력하세요."><br>
-  Content: <textarea name="post_content" placeholder="내용을 입력하세요."></textarea><br>
+  제목: <input type="text" name="post_title" placeholder="제목을 입력하세요."><br>
+  내용: <textarea name="post_content" placeholder="내용을 입력하세요."></textarea><br>
   <input type="submit" value="추가하기">
 </form>

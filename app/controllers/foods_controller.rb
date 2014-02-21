@@ -11,14 +11,16 @@ class FoodsController < ApplicationController
   end
 
   def create
-		p = Post.new
-		p.category = params[:post_category]
-		p.title = params[:post_title]
-		p.content = params[:post_content]
-		p.like = 0
-		if p.save
-			redirect_to "/"
+		@post = Post.new
+		@post.category = params[:post_category]
+		@post.title = params[:post_title]
+		@post.content = params[:post_content]
+		@post.like = 0
+		if @post.save
+			flash[:alert] = "다음을 저장하시겠습니까?"
+			render :action => 'show' 
 		else
+			flash[:alert] = "제목을 반드시 입력하셔야 합니다."
 			render :action => 'new'
 		end
   end
