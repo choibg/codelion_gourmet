@@ -34,6 +34,17 @@ class FoodsController < ApplicationController
   end
 
   def update
+		post = Post.find(params[:id])
+		post.category = params[:post_category]
+		post.title = params[:post_title]
+		post.content = params[:post_content]
+		if post.save
+			flash[:alert] = "저장되었습니다."
+			redirect_to "/foods/show/#{post.id}"
+		else
+			flash[:alert] = "제목을 반드시 입력하셔야 합니다."
+			redirect_to "/foods/update/#{post.id}"
+		end
   end
 
   def destroy
