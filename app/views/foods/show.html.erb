@@ -1,3 +1,5 @@
+<h2>맛집 정보 보기</h2>
+
 <p><%= flash[:alert] %></p>
 
 <p>분류: <%= @post.category %></p>
@@ -5,4 +7,4 @@
 <p>내용: <%= @post.content %></p>
 
 <div>
-	<a href="/foods/edit/<%= @post.id %>">편집</a> | <a href="/foods/destroy/<%= @post.id %>">삭제</a> || <a href="/<%= @post.category %>">저장</a>
+	<a href="/foods/edit/<%= @post.id %>">편집</a> | <a href="/foods/destroy/<%= @post.id %>">삭제</a> || <a href="/<%= @post.category %>">목록</a>

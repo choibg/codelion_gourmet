@@ -4,9 +4,5 @@
 <hr>
 
 <% @posts.each do |post| %>
-<div style="border: 1px solid #ffffff">
-	<h4><%= post.title %></h4>
-	<p><%= post.content %></p>
-	<p>Like: <span style="color: #0000ff"><%= post.like %></span></p>
-</div>
+<%= render :partial => "foods/post" %>
 <% end %>
