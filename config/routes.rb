@@ -7,6 +7,8 @@ Gourmet::Application.routes.draw do
   get "foods/edit/:id" => 'foods#edit'
   post "foods/update"
   get "foods/destroy/:id" => 'foods#destroy'
+
+	post "foods/create_comment"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
