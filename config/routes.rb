@@ -2,7 +2,7 @@ Gourmet::Application.routes.draw do
 	root 'foods#index'
   get ":category" => 'foods#index_category'
   get "foods/new"
-  get "foods/create"
+  post "foods/create"
   get "foods/show"
   get "foods/edit"
   get "foods/update"

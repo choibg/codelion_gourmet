@@ -11,6 +11,16 @@ class FoodsController < ApplicationController
   end
 
   def create
+		p = Post.new
+		p.category = params[:post_category]
+		p.title = params[:post_title]
+		p.content = params[:post_content]
+		p.like = 0
+		if p.save
+			redirect_to "/"
+		else
+			render :action => 'new'
+		end
   end
 
   def show
