@@ -1,4 +1,7 @@
 class FoodsController < ApplicationController
+	before_action :session_check
+	skip_before_action :session_check, :only => [:index, :index_category, :show]
+
   def index
 		@posts = Post.all
   end
