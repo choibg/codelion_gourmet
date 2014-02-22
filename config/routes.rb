@@ -1,4 +1,9 @@
 Gourmet::Application.routes.draw do
+  get "users/new"
+  get "users/create"
+  get "users/new_session"
+  get "users/create_session"
+  get "users/destroy_session"
 	root 'foods#index'
   get ":category" => 'foods#index_category'
   get "foods/new"
