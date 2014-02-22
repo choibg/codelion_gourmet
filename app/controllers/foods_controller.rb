@@ -15,6 +15,7 @@ class FoodsController < ApplicationController
 
   def create
 		post = Post.new
+		post.user_id = session[:user_id]
 		post.category = params[:post_category]
 		post.title = params[:post_title]
 		post.content = params[:post_content]

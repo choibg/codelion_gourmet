@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 		if !session[:user_id].nil?
 			@current_user = User.find(session[:user_id])
 		else
-			redirect_to "/user/new_session"
+			redirect_to "/users/new_session"
 		end
 	end
 end

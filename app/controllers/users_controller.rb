@@ -41,5 +41,7 @@ class UsersController < ApplicationController
   end
 
   def destroy_session
+		reset_session
+		redirect_to :back
   end
 end
