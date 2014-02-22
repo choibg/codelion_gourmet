@@ -10,10 +10,10 @@
 	<p><a href="/foods/edit/<%= @post.id %>">편집</a> | <a href="/foods/destroy/<%= @post.id %>">삭제</a> || <a href="/<%= @post.category %>">목록</a></p>
 	<hr>
 	<% @post.comments.each do |comment| %>
-	<p><%= comment.content %></p>
+	<p><%= comment.content %> <a href="/foods/destroy_comment/<%= comment.id %>">삭제</a></p>
 	<% end %>
 	<form action="/foods/create_comment" method="post">
 		<p>댓글: <input type="text" name="comment_content" placeholder="내용을 입력하세요."> <input type="submit" value="달기"></p>
 		<input type="hidden" name="post_id" value="<%= @post.id %>">
 	</form>
-	
+</div>

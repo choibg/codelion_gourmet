@@ -65,5 +65,9 @@ class FoodsController < ApplicationController
 	end
 
 	def destroy_comment
+		comment = Comment.find(params[:id])
+		comment.destroy
+		flash[:alert] = "댓글이 삭제되었습니다."
+		redirect_to "/foods/show/#{comment.post_id}" 
 	end
 end
