@@ -10,5 +10,6 @@
 		</select></p>
 	<p>제목: <input type="text" name="post_title" value="<%= @post.title %>"></p>
 	<p>내용: <textarea name="post_content"><%= @post.content %></textarea></p>
+	<input type="hidden" name="id" value="<%= @post.id %>">
 	<input type="submit" value="수정하기">
 </form>
