@@ -1,3 +1,13 @@
-<h2><%= @posts[0].category %></h2>
+<div class="container">
+	<div class="row">
+		<div class="panel panel-danger">
+		  <div class="panel-heading">
+		    <h3 class="panel-title"><%= @posts[0].category %></h3>
+		  </div>
+		  <div class="panel-body">
+		  	<%= render "foods/post" %>
+		  </div>
+		</div>
+	</div>
+</div>
 
-<%= render "foods/post" %>

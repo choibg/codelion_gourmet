@@ -1,14 +1,21 @@
-<h2>맛집 추가하기</h2>
-<p><%= flash[:alert] %></p>
-<form action="/foods/create" method="post">
-	<p>분류: 
-	<select name="post_category">
-		<option value="korean">한식</option>
-		<option value="chinese">중식</option>
-		<option value="japanese">일식</option>
-		<option value="western">양식</option>
-	</select></p>
-  <p>제목: <input type="text" name="post_title" placeholder="제목을 입력하세요."></p>
-  <p>내용: <textarea name="post_content" placeholder="내용을 입력하세요."></textarea></p>
-  <input type="submit" value="추가하기">
-</form>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+		<h2 class="text-center">맛집 추가하기</h2>
+			<p><%= flash[:alert] %></p>
+		<form action="/foods/create" class="form-signin"method="post">
+			<p class="text-center">분류: 
+			<select name="post_category">
+				<option value="korean">한식</option>
+				<option value="chinese">중식</option>
+				<option value="japanese">일식</option>
+				<option value="western">양식</option>
+			</select></p>
+		  <p class="text-center"><input class="form-control"placeholder="제목"type="text" name="post_title" placeholder="제목을 입력하세요."></p>
+		  <p class="text-center"><textarea class="form-control"placeholder="내용"name="post_content" placeholder="내용을 입력하세요."></textarea></p>
+		  <input class="btn btn-lg btn-primary btn-block" type="submit" value="추가하기">
+		</form>
+		</div>
+	</div>
+</div>
+

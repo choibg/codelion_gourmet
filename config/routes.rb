@@ -5,7 +5,7 @@ Gourmet::Application.routes.draw do
   post "users/create_session"
   get "users/destroy_session"
 
-	root 'foods#index'
+  root 'foods#index'
   get ":category" => 'foods#index_category'
   get "foods/new"
   post "foods/create"
@@ -14,8 +14,8 @@ Gourmet::Application.routes.draw do
   post "foods/update"
   get "foods/destroy/:id" => 'foods#destroy'
 
-	post "foods/create_comment"
-	get "foods/destroy_comment/:id" => 'foods#destroy_comment'
+  post "foods/create_comment"
+  get "foods/destroy_comment/:id" => 'foods#destroy_comment'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
